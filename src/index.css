@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  /* Zinc-based Dark Palette */
+  --color-surface: #09090b;      /* zinc-950 */
+  --color-surface-subtle: #18181b; /* zinc-900 */
+  --color-surface-muted: #27272a;  /* zinc-800 */
+  --color-surface-elevated: #18181b; /* Same as subtle but logically distinct */
+
+  --color-border: #27272a;         /* zinc-800 */
+  --color-border-subtle: #3f3f46;  /* zinc-700 */
+
+  --color-text-main: #fafafa;      /* zinc-50 */
+  --color-text-muted: #a1a1aa;     /* zinc-400 */
+  --color-text-dim: #71717a;       /* zinc-500 */
+
+  /* Semantic Intents */
+  --color-brand-primary: #6366f1;  /* indigo-500 */
+  --color-brand-glow: rgba(99, 102, 241, 0.15);
+
+  --color-status-bad: #ef4444;     /* red-500 */
+  --color-status-good: #10b981;    /* emerald-500 */
+  --color-status-best: #8b5cf6;    /* violet-500 */
+  
+  --font-display: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --radius-panel: 12px;
+  --radius-btn: 8px;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Glass effect utility */
+.glass-panel {
+  background: rgba(24, 24, 27, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth transitions for interactive elements */
+.interactive-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.interactive-hover:hover {
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-muted);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-subtle);
+}
