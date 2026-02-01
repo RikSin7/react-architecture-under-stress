@@ -11,6 +11,11 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/tests/setup.ts',
   },
+  resolve: {
+    alias: {
+      'react-dom/client': 'react-dom/profiling',
+    },
+  },
   server: {
     host: '0.0.0.0',
     port: 5173,
