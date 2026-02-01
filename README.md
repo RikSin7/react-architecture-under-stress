@@ -1,4 +1,4 @@
-# PerfMatch: React Architecture Under Stress 🚀
+# PerfMatch: React Architecture Under Load 🚀
 
 > **"Show, Don't Tell."**
 > This project is an interactive case study on React rendering behavior, demonstrating the evolution from "naive implementation" to "high-performance engineering".
